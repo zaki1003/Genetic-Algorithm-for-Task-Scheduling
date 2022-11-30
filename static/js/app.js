@@ -21,6 +21,10 @@ function AppController($scope, $http) {
         $scope.tasks.push(task);
     };
 
+    $scope.removeTask = function () {
+        $scope.tasks.pop();
+    };
+
     $scope.setDependency = function (task, depend) {
         task.depend = depend;
     };
