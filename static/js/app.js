@@ -25,6 +25,14 @@ function AppController($scope, $http) {
         $scope.tasks.pop();
     };
 
+    $scope.addProcessor = function () {
+        $scope.constraints.processors++;
+    };
+    
+    $scope.removeProcessor = function () {
+        if ($scope.constraints.processors > 1) $scope.constraints.processors--;
+    };
+
     $scope.setDependency = function (task, depend) {
         task.depend = depend;
     };
